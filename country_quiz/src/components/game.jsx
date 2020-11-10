@@ -39,7 +39,6 @@ const Game = ({ countries, changeNumber, changeResult, numberQuestion }) => {
             setCssResponse([{ "name" : ramdomCountries[ramdomId].name, "check" : true}, 
                             { "name" : "", "check" : ""} 
                         ])
-            console.log("true")
         }
 
         else {
@@ -47,14 +46,8 @@ const Game = ({ countries, changeNumber, changeResult, numberQuestion }) => {
             setCssResponse([{ name : ramdomCountries[ramdomId].name, check : true}, 
                             { name : responseClient, check : false} 
                         ])
-            console.log("false")
         }
     }
-
-    useEffect(() => {
-
-    })
-
   
     return(
         <div className="game">

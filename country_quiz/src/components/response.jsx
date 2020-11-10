@@ -12,9 +12,13 @@ const Response = ({ name, flag, testResponse, cssResponse, letter}) => {
             css = cssResponse[1].check
         }
     }
+
+    const doNothing = () => {
+        
+    }
     
     return (
-        <div className={"response" + ' ' + css } onClick={() => {testResponse(name)}}>
+        <div className={"response" + ' ' + css } onClick={cssResponse === null ? () => {testResponse(name)}: doNothing()}>
             <strong>{letter}</strong>    {name}
         </div>
     )
