@@ -1,0 +1,26 @@
+
+.start {
+    color: #2F527B;
+}
+
+.start p {
+    font-weight: bold;
+    font-size: 24px;
+
+    text-align: center;
+    line-height: 30px;
+}
+
+.btn {
+    width: 116px;
+    height: 56px;
+    background-color: #F9A826;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    margin: auto;
+    display: inherit;
+    margin-top: 200px;
+}
+
+

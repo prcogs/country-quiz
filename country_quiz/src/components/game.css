@@ -1,0 +1,13 @@
+
+
+.game ul {
+    padding-left: 0;
+}
+
+.btnNext {
+    margin-top: 0;
+
+    position: absolute;
+    bottom: 30px;
+    right: 37px;
+}

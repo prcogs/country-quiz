@@ -1,0 +1,17 @@
+
+
+.response {
+    width: 90%;
+
+    color: #6066D0;
+
+    border: 2px solid #6066D0;
+    border-radius: 12px;
+
+    padding: 10px;
+    margin-top: 31px;
+}
+
+.response strong {
+    margin-right: 3rem;
+}

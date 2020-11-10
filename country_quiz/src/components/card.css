@@ -1,0 +1,12 @@
+
+
+.card {
+    position: relative;
+    width: 432px;
+    height: 515px;
+    background-color: white;
+    border-radius:24px;
+
+    margin: auto;
+    padding: 32px;
+}
