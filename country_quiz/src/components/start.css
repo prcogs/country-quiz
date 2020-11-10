@@ -11,6 +11,10 @@
     line-height: 30px;
 }
 
+.start p:nth-of-type(1) {
+    margin-top: 75px;
+}
+
 .btn {
     width: 116px;
     height: 56px;
@@ -18,9 +22,13 @@
     border-radius: 12px;
     color: white;
     font-size: 18px;
+    font-weight: bold;
     margin: auto;
     display: inherit;
-    margin-top: 200px;
+    margin-top: 125px;
+    border: none;
+
+    cursor: pointer;
 }
 
 

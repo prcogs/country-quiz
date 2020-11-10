@@ -10,8 +10,28 @@
 
     padding: 10px;
     margin-top: 31px;
+
+    cursor: pointer;
+}
+
+.response:hover {
+    background-color: #F9A826;
+    border-color: white;
+    color: white;
 }
 
 .response strong {
     margin-right: 3rem;
+}
+
+.true {
+    background-color: #60BF88;
+    border-color: white;
+    color: white;
+}
+
+.false {
+    background-color: #EA8282;
+    border-color: white;
+    color: white;
 }

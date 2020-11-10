@@ -1,5 +1,9 @@
 
 
+.game {
+    margin-top: 25px;
+}
+
 .game ul {
     padding-left: 0;
 }
@@ -10,4 +14,17 @@
     position: absolute;
     bottom: 30px;
     right: 37px;
+}
+
+.svgGame {
+    position: absolute;
+    top: -74px;
+    right: 0;
+}
+
+.numberQ {
+    display: inline-block;
+    margin-top: 84px;
+    margin-left: 14px;
+    font-size: 22px;
 }
