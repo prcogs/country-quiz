@@ -13,9 +13,7 @@ const Response = ({ name, flag, testResponse, cssResponse, letter}) => {
         }
     }
 
-    const doNothing = () => {
-        
-    }
+    const doNothing = () => {}
     
     return (
         <div className={"response" + ' ' + css } onClick={cssResponse === null ? () => {testResponse(name)}: doNothing()}>

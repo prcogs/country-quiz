@@ -23,8 +23,8 @@
 }
 
 .numberQ {
-    display: inline-block;
-    margin-top: 84px;
-    margin-left: 14px;
     font-size: 22px;
+    position: absolute;
+    left: 45px;
+    bottom: 15px;
 }

@@ -5,10 +5,11 @@ import Response from './response'
 import getRandomInt from '../lib/getRamdomInt'
 import svgGame from '../images/undraw_adventure_4hum 1.svg'
 
-const Game = ({ countries, changeNumber, changeResult, numberQuestion }) => {
+const Game = ({ countries, changeNumber, changeResult, numberQuestion, totalQuestion }) => {
     const [ramdomCountries, setRamdomCountries] = useState([])
     const [ramdomId, setRamdomId] = useState("")
     const [cssResponse, setCssResponse] = useState(null)
+    const [countORflag, setCountORflag] = useState(Math.floor(Math.random() * 2))
 
     const letter = ["A", "B", "C", "D"]
 
@@ -21,6 +22,7 @@ const Game = ({ countries, changeNumber, changeResult, numberQuestion }) => {
 
         setRamdomCountries(id)
         setRamdomId(getRandomInt(4))
+        setCountORflag(Math.floor(Math.random() * 2))
     },[numberQuestion])
 
 
@@ -48,23 +50,23 @@ const Game = ({ countries, changeNumber, changeResult, numberQuestion }) => {
                         ])
         }
     }
+
   
     return(
         <div className="game">
             <img src={svgGame} className="svgGame"/>
-            <Question country={question}/>
+            <Question country={question} count={countORflag}/>
             <ul>
                 {ramdomCountries.map((ramdomCountry, i) => (
                     <Response name={ramdomCountry.name} 
-                              flag={ramdomCountry.flag}
                               testResponse={testResponse}
                               cssResponse={cssResponse} 
                               letter={letter[i]} 
                               key={i}/>
                 ))}
             </ul>
-            <p className="numberQ">{numberQuestion} / 5</p>
-            <button onClick={() => {changeNumber(numberQuestion + 1); setCssResponse(null)}} className="btn btnNext">Next</button>
+            <p className="numberQ">{numberQuestion} / {totalQuestion}</p>
+            <button onClick={() => {changeNumber((numberQuestion + 1), totalQuestion); setCssResponse(null); }} className="btn btnNext">Next</button>
         </div>
     );
     

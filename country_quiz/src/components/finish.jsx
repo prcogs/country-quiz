@@ -7,7 +7,7 @@ const Finish = ({ changeState , restart, result}) => {
             <img src={svg}/>
             <p>Result</p>
             <p>You got <strong>{result}</strong> correct answer</p>
-            <button onClick={() => {changeState("game"); restart()}} className="btnFinish">Try again</button>
+            <button onClick={() => {changeState("start"); restart()}} className="btnFinish">Try again</button>
         </div>
     )
 }

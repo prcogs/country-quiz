@@ -47,6 +47,7 @@ function App() {
       <div className="App">
         <h1>COUNTRY QUIZ</h1>
         <Card countries={items}/>
+        <footer>Florian Fort  @Dev challenges</footer>
       </div>
     );
   }

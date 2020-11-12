@@ -8,14 +8,14 @@ const Card = ({ countries }) => {
     const [state, setState] = useState("start")
     const [numberQuestion, setNumber] = useState(1)
     const [result, setResult] = useState(0)
+    const [totalQuestion, setTotalQuestion] = useState(1)
 
     const changeState = (state) => {
         setState(state)
     }
 
-    // ajout d'un state pour choisir le nbr de question ?
-    const changeNumber = (newNumber) => {
-        if(newNumber >= 6) {
+    const changeNumber = (newNumber, totalQuestion) => {
+        if(newNumber >= (Number(totalQuestion) + 1)) {
             setState("finish")
         }
         else {setNumber(newNumber)}
@@ -30,19 +30,25 @@ const Card = ({ countries }) => {
         setNumber(1)
     }
 
+    const handleTotalQuestion = (number) => {
+        setTotalQuestion(number)
+    }
+
     return(
-        <div className="card">
-            {state === "start"  ?   <Start changeState={changeState}/> : 
+        <div className="card slideRight">
+            {state === "start"  ?   <Start changeState={changeState}
+                                           handleTotalQuestion={handleTotalQuestion}
+                                           totalQuestion={totalQuestion}/> : 
 
              state === "game"   ?   <Game countries={countries}
                                           changeNumber={changeNumber}
                                           changeResult={changeResult}
-                                          numberQuestion={numberQuestion} />  : 
+                                          numberQuestion={numberQuestion}
+                                          totalQuestion={totalQuestion} />  : 
 
              state === "finish" ?   <Finish changeState={changeState}
                                             restart={restart}
-                                            result={result}
-                                            />   :
+                                            result={result}/>   :
 
               "Erreur"
             }
