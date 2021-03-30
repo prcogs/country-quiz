@@ -54,7 +54,7 @@ const Game = ({ countries, changeNumber, changeResult, numberQuestion, totalQues
   
     return(
         <div className="game">
-            <img src={svgGame} className="svgGame"/>
+            <img src={svgGame} alt="Game" className="svgGame"/>
             <Question country={question} count={countORflag}/>
             <ul>
                 {ramdomCountries.map((ramdomCountry, i) => (
