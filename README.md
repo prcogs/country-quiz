@@ -1,4 +1,4 @@
-### Country_quiz
+# Country_quiz
 
 ## Description de l'application
 
@@ -6,9 +6,12 @@ Quiz sur les capitales et les drapeaux des pays d'Europe.
 
 ## Stacks
 
-Front : ReactJS, Creat-react-app
-Style : Sass
-API   : [restcountries](https://restcountries.eu/)
+* Front : ReactJS, Creat-react-app
+* Style : Sass
+* API   : [restcountries](https://restcountries.eu/)
+
+
+
 
 ---
 
