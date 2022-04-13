@@ -1,4 +1,4 @@
-# Country_quiz
+# Country quiz
 
 ## Description de l'application
 
